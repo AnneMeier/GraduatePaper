@@ -1,0 +1,16 @@
+Filebench Version 1.5-alpha3
+0.000: Allocated 173MB of shared memory
+0.001: Web-server Version 3.1 personality successfully loaded
+0.001: Populating and pre-allocating filesets
+0.001: logfiles populated: 1 files, avg. dir. width = 20, avg. dir. depth = 0.0, 0 leafdirs, 0.002MB total size
+0.001: Removing logfiles tree (if exists)
+0.137: Pre-allocating directories in logfiles tree
+0.137: Pre-allocating files in logfiles tree
+0.137: bigfileset populated: 1000 files, avg. dir. width = 20, avg. dir. depth = 2.3, 0 leafdirs, 14.760MB total size
+0.137: Removing bigfileset tree (if exists)
+0.151: Pre-allocating directories in bigfileset tree
+0.152: Pre-allocating files in bigfileset tree
+0.171: Waiting for pre-allocation to finish (in case of a parallel pre-allocation)
+0.171: Population and pre-allocation of filesets completed
+0.171: Starting 1 filereader instances
+1.211: Running...
