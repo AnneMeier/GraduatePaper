@@ -1,0 +1,1400 @@
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ----------------
+ 86.65    0.951020        2342       406       203 wait4
+ 13.29    0.145822         483       302         1 nanosleep
+  0.01    0.000121           3        43           mmap
+  0.01    0.000104           4        29           openat
+  0.01    0.000090           3        30           mprotect
+  0.01    0.000081           5        16           stat
+  0.01    0.000062           2        27           close
+  0.01    0.000058           3        20         7 write
+  0.00    0.000040           3        15           read
+  0.00    0.000034          17         2           getdents
+  0.00    0.000033          17         2           clone
+  0.00    0.000031           2        18           fstat
+  0.00    0.000029           2        14         1 futex
+  0.00    0.000006           2         4           rt_sigaction
+  0.00    0.000004           4         1         1 semget
+  0.00    0.000003           3         1         1 ioctl
+  0.00    0.000000           0         1           lseek
+  0.00    0.000000           0         2           munmap
+  0.00    0.000000           0         3           brk
+  0.00    0.000000           0         1           rt_sigprocmask
+  0.00    0.000000           0         7         7 access
+  0.00    0.000000           0         1           shmget
+  0.00    0.000000           0         1           shmat
+  0.00    0.000000           0         1           shmctl
+  0.00    0.000000           0       205           getpid
+  0.00    0.000000           0         1           execve
+  0.00    0.000000           0       203           kill
+  0.00    0.000000           0         1           semctl
+  0.00    0.000000           0         2         1 unlink
+  0.00    0.000000           0         2           personality
+  0.00    0.000000           0         1           arch_prctl
+  0.00    0.000000           0         1           set_tid_address
+  0.00    0.000000           0         1           restart_syscall
+  0.00    0.000000           0         1           set_robust_list
+  0.00    0.000000           0         4           prlimit64
+------ ----------- ----------- --------- --------- ----------------
+100.00    1.097538                  1369       222 total
+ctory)
+     0.000021 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libm.so.6", O_RDONLY|O_CLOEXEC) = 3
+     0.000020 read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\200\272\0\0\0\0\0\0"..., 832) = 832
+     0.000019 fstat(3, {st_mode=S_IFREG|0644, st_size=1700792, ...}) = 0
+     0.000018 mmap(NULL, 3789144, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7ffff7614000
+     0.000172 mprotect(0x7ffff77b1000, 2093056, PROT_NONE) = 0
+     0.000021 mmap(0x7ffff79b0000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x19c000) = 0x7ffff79b0000
+     0.000029 close(3)                  = 0
+     0.000023 access("/etc/ld.so.nohwcap", F_OK) = -1 ENOENT (No such file or directory)
+     0.000022 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/librt.so.1", O_RDONLY|O_CLOEXEC) = 3
+     0.000020 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\"\0\0\0\0\0\0"..., 832) = 832
+     0.000019 fstat(3, {st_mode=S_IFREG|0644, st_size=31680, ...}) = 0
+     0.000019 mmap(NULL, 2128864, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7ffff740c000
+     0.000019 mprotect(0x7ffff7413000, 2093056, PROT_NONE) = 0
+     0.000019 mmap(0x7ffff7612000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x6000) = 0x7ffff7612000
+     0.000023 close(3)                  = 0
+     0.000018 access("/etc/ld.so.nohwcap", F_OK) = -1 ENOENT (No such file or directory)
+     0.000020 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+     0.000019 read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260\34\2\0\0\0\0\0"..., 832) = 832
+     0.000018 fstat(3, {st_mode=S_IFREG|0755, st_size=2030544, ...}) = 0
+     0.000018 mmap(NULL, 4131552, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7ffff701b000
+     0.000019 mprotect(0x7ffff7202000, 2097152, PROT_NONE) = 0
+     0.000023 mmap(0x7ffff7402000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1e7000) = 0x7ffff7402000
+     0.000021 mmap(0x7ffff7408000, 15072, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7ffff7408000
+     0.000020 close(3)                  = 0
+     0.000025 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7ffff7fdc000
+     0.000020 arch_prctl(ARCH_SET_FS, 0x7ffff7fdd1c0) = 0
+     0.000043 mprotect(0x7ffff7402000, 16384, PROT_READ) = 0
+     0.000020 mprotect(0x7ffff7bcb000, 4096, PROT_READ) = 0
+     0.000019 mprotect(0x7ffff7612000, 4096, PROT_READ) = 0
+     0.000028 mprotect(0x7ffff79b0000, 4096, PROT_READ) = 0
+     0.000019 mprotect(0x7ffff7dd3000, 4096, PROT_READ) = 0
+     0.000052 mprotect(0x55555577e000, 4096, PROT_READ) = 0
+     0.000021 mprotect(0x7ffff7ffc000, 4096, PROT_READ) = 0
+     0.000017 munmap(0x7ffff7fe0000, 91277) = 0
+     0.000021 set_tid_address(0x7ffff7fdd490) = 20150
+     0.000016 set_robust_list(0x7ffff7fdd4a0, 24) = 0
+     0.000018 rt_sigaction(SIGRTMIN, {sa_handler=0x7ffff79b7cb0, sa_mask=[], sa_flags=SA_RESTORER|SA_SIGINFO, sa_restorer=0x7ffff79c4890}, NULL, 8) = 0
+     0.000021 rt_sigaction(SIGRT_1, {sa_handler=0x7ffff79b7d50, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART|SA_SIGINFO, sa_restorer=0x7ffff79c4890}, NULL, 8) = 0
+     0.000020 rt_sigprocmask(SIG_UNBLOCK, [RTMIN RT_1], NULL, 8) = 0
+     0.000020 prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+     0.000031 personality(0xffffffff)   = 0 (PER_LINUX)
+     0.000016 personality(0xffffffff)   = 0 (PER_LINUX)
+     0.000017 getpid()                  = 20150
+     0.000016 prlimit64(0, RLIMIT_NOFILE, NULL, {rlim_cur=1024, rlim_max=4*1024}) = 0
+     0.000018 prlimit64(0, RLIMIT_NOFILE, {rlim_cur=4*1024, rlim_max=4*1024}, NULL) = 0
+     0.000018 prlimit64(0, RLIMIT_NOFILE, {rlim_cur=50000, rlim_max=50000}, NULL) = 0
+     0.000023 fstat(1, {st_mode=S_IFCHR|0620, st_rdev=makedev(136, 1), ...}) = 0
+     0.000039 brk(NULL)                 = 0x555555781000
+     0.000015 brk(0x5555557a2000)       = 0x5555557a2000
+     0.000019 write(1, "Filebench Version 1.5-alpha3\n", 29) = 29
+     0.000025 openat(AT_FDCWD, "oltp.f", O_RDONLY) = 3
+     0.000021 openat(AT_FDCWD, "/proc/sys/kernel/shmmax", O_RDWR) = 4
+     0.000022 fstat(4, {st_mode=S_IFREG|0644, st_size=0, ...}) = 0
+     0.000018 write(4, "268435456\0", 10) = -1 EINVAL (Invalid argument)
+     0.000019 close(4)                  = 0
+     0.000020 getpid()                  = 20150
+     0.000016 openat(AT_FDCWD, "/tmp/filebench-shm-sbs9hh", O_RDWR|O_CREAT|O_EXCL, 0600) = 4
+     0.000043 lseek(4, 180780928, SEEK_SET) = 180780928
+     0.000016 write(4, "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 1048576) = 1048576
+     0.000475 mmap(NULL, 180780928, PROT_READ|PROT_WRITE, MAP_SHARED, 4, 0) = 0x7fffec3b3000
+     0.014255 write(1, "0.000: Allocated 173MB of shared"..., 40) = 40
+     0.000060 futex(0x7fffffefe494, FUTEX_UNLOCK_PI) = -1 EPERM (Operation not permitted)
+     0.000024 stat("/tmp/filebench-shm-sbs9hh", {st_mode=S_IFREG|0600, st_size=181829504, ...}) = 0
+     0.000031 semget(0x1220491, 0, 000) = -1 ENOENT (No such file or directory)
+     0.000137 mmap(NULL, 8392704, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7fffebbb2000
+     0.000025 mprotect(0x7fffebbb3000, 8388608, PROT_READ|PROT_WRITE) = 0
+     0.000034 clone(child_stack=0x7fffec3b1fb0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7fffec3b29d0, tls=0x7fffec3b2700, child_tidptr=0x7fffec3b29d0) = 20151
+     0.000047 openat(AT_FDCWD, "/usr/local/lib/filebench", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 5
+     0.000032 fstat(5, {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+     0.000020 getdents(5, /* 42 entries */, 32768) = 1776
+     0.000070 futex(0x7fffee7b47d8, FUTEX_WAKE, 1) = 0
+     0.000019 futex(0x7fffee7b47d8, FUTEX_WAKE, 1) = 0
+     0.000024 futex(0x7fffee7b47d8, FUTEX_WAKE, 1) = 0
+     0.000018 futex(0x7fffee7b47d8, FUTEX_WAKE, 1) = 0
+     0.000017 futex(0x7fffee7b47d8, FUTEX_WAKE, 1) = 0
+     0.000017 futex(0x7fffee7b47d8, FUTEX_WAKE, 1) = 0
+     0.000269 futex(0x7fffee7b47d8, FUTEX_WAKE, 1) = 0
+     0.000018 futex(0x7fffee7b47d8, FUTEX_WAKE, 1) = 0
+     0.000017 getdents(5, /* 0 entries */, 32768) = 0
+     0.000018 close(5)                  = 0
+     0.000021 futex(0x7ffff7dd40c8, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+     0.000022 openat(AT_FDCWD, "/usr/local/lib/filebench/libcvar-gamma.so", O_RDONLY|O_CLOEXEC) = 5
+     0.000023 read(5, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\200!\0\0\0\0\0\0"..., 832) = 832
+     0.000021 fstat(5, {st_mode=S_IFREG|0755, st_size=88512, ...}) = 0
+     0.000019 mmap(NULL, 2127080, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 5, 0) = 0x7fffeb9aa000
+     0.000024 mprotect(0x7fffeb9b0000, 2093056, PROT_NONE) = 0
+     0.000020 mmap(0x7fffebbaf000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 5, 0x5000) = 0x7fffebbaf000
+     0.000027 mmap(0x7fffebbb1000, 1256, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fffebbb1000
+     0.000032 close(5)                  = 0
+     0.000040 mprotect(0x7fffebbaf000, 4096, PROT_READ) = 0
+     0.000023 openat(AT_FDCWD, "/usr/local/lib/filebench/libcvar-weibull.so", O_RDONLY|O_CLOEXEC) = 5
+     0.000021 read(5, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\360 \0\0\0\0\0\0"..., 832) = 832
+     0.000019 fstat(5, {st_mode=S_IFREG|0755, st_size=85400, ...}) = 0
+     0.000019 mmap(NULL, 2127048, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 5, 0) = 0x7fffeb7a2000
+     0.000019 mprotect(0x7fffeb7a8000, 2093056, PROT_NONE) = 0
+     0.000021 mmap(0x7fffeb9a7000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 5, 0x5000) = 0x7fffeb9a7000
+     0.000022 mmap(0x7fffeb9a9000, 1224, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fffeb9a9000
+     0.000019 close(5)                  = 0
+     0.000029 mprotect(0x7fffeb9a7000, 4096, PROT_READ) = 0
+     0.000022 openat(AT_FDCWD, "/usr/local/lib/filebench/libcvar-lognormal.so", O_RDONLY|O_CLOEXEC) = 5
+     0.000020 read(5, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\360 \0\0\0\0\0\0"..., 832) = 832
+     0.000019 fstat(5, {st_mode=S_IFREG|0755, st_size=85408, ...}) = 0
+     0.000019 mmap(NULL, 2127048, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 5, 0) = 0x7fffeb59a000
+     0.000019 mprotect(0x7fffeb5a0000, 2093056, PROT_NONE) = 0
+     0.000021 mmap(0x7fffeb79f000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 5, 0x5000) = 0x7fffeb79f000
+     0.000021 mmap(0x7fffeb7a1000, 1224, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fffeb7a1000
+     0.000020 close(5)                  = 0
+     0.000029 mprotect(0x7fffeb79f000, 4096, PROT_READ) = 0
+     0.000020 openat(AT_FDCWD, "/usr/local/lib/filebench/libcvar-uniform.so", O_RDONLY|O_CLOEXEC) = 5
+     0.000021 read(5, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\360 \0\0\0\0\0\0"..., 832) = 832
+     0.000018 fstat(5, {st_mode=S_IFREG|0755, st_size=85776, ...}) = 0
+     0.000018 mmap(NULL, 2127048, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 5, 0) = 0x7fffeb392000
+     0.000019 mprotect(0x7fffeb398000, 2093056, PROT_NONE) = 0
+     0.000021 mmap(0x7fffeb597000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 5, 0x5000) = 0x7fffeb597000
+     0.000021 mmap(0x7fffeb599000, 1224, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fffeb599000
+     0.000019 close(5)                  = 0
+     0.000029 mprotect(0x7fffeb597000, 4096, PROT_READ) = 0
+     0.000020 openat(AT_FDCWD, "/usr/local/lib/filebench/libcvar-normal.so", O_RDONLY|O_CLOEXEC) = 5
+     0.000020 read(5, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\360 \0\0\0\0\0\0"..., 832) = 832
+     0.000019 fstat(5, {st_mode=S_IFREG|0755, st_size=85048, ...}) = 0
+     0.000020 mmap(NULL, 2127048, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 5, 0) = 0x7fffeb18a000
+     0.000018 mprotect(0x7fffeb190000, 2093056, PROT_NONE) = 0
+     0.000024 mmap(0x7fffeb38f000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 5, 0x5000) = 0x7fffeb38f000
+     0.000022 mmap(0x7fffeb391000, 1224, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fffeb391000
+     0.000020 close(5)                  = 0
+     0.000028 mprotect(0x7fffeb38f000, 4096, PROT_READ) = 0
+     0.000020 openat(AT_FDCWD, "/usr/local/lib/filebench/libcvar-triangular.so", O_RDONLY|O_CLOEXEC) = 5
+     0.000020 read(5, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\360 \0\0\0\0\0\0"..., 832) = 832
+     0.000019 fstat(5, {st_mode=S_IFREG|0755, st_size=86864, ...}) = 0
+     0.000017 mmap(NULL, 2127048, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 5, 0) = 0x7fffeaf82000
+     0.000020 mprotect(0x7fffeaf88000, 2093056, PROT_NONE) = 0
+     0.000021 mmap(0x7fffeb187000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 5, 0x5000) = 0x7fffeb187000
+     0.000021 mmap(0x7fffeb189000, 1224, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fffeb189000
+     0.000020 close(5)                  = 0
+     0.000027 mprotect(0x7fffeb187000, 4096, PROT_READ) = 0
+     0.000020 openat(AT_FDCWD, "/usr/local/lib/filebench/libcvar-erlang.so", O_RDONLY|O_CLOEXEC) = 5
+     0.000020 read(5, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0000!\0\0\0\0\0\0"..., 832) = 832
+     0.000018 fstat(5, {st_mode=S_IFREG|0755, st_size=85560, ...}) = 0
+     0.000018 mmap(NULL, 2127048, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 5, 0) = 0x7fffead7a000
+     0.000019 mprotect(0x7fffead80000, 2093056, PROT_NONE) = 0
+     0.000021 mmap(0x7fffeaf7f000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 5, 0x5000) = 0x7fffeaf7f000
+     0.000021 mmap(0x7fffeaf81000, 1224, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fffeaf81000
+     0.000020 close(5)                  = 0
+     0.000031 mprotect(0x7fffeaf7f000, 4096, PROT_READ) = 0
+     0.000021 openat(AT_FDCWD, "/usr/local/lib/filebench/libcvar-exponential.so", O_RDONLY|O_CLOEXEC) = 5
+     0.000020 read(5, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\360 \0\0\0\0\0\0"..., 832) = 832
+     0.000017 fstat(5, {st_mode=S_IFREG|0755, st_size=84168, ...}) = 0
+     0.000018 mmap(NULL, 2127048, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 5, 0) = 0x7fffeab72000
+     0.000018 mprotect(0x7fffeab78000, 2093056, PROT_NONE) = 0
+     0.000020 mmap(0x7fffead77000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 5, 0x5000) = 0x7fffead77000
+     0.000021 mmap(0x7fffead79000, 1224, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fffead79000
+     0.000020 close(5)                  = 0
+     0.000029 mprotect(0x7fffead77000, 4096, PROT_READ) = 0
+     0.000019 rt_sigaction(SIGINT, {sa_handler=0x555555565910, sa_mask=[INT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7ffff7059f20}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+     0.000023 ioctl(3, TCGETS, 0x7fffffffdb10) = -1 ENOTTY (Inappropriate ioctl for device)
+     0.000020 fstat(3, {st_mode=S_IFREG|0644, st_size=2713, ...}) = 0
+     0.000019 read(3, "#\n# CDDL HEADER START\n#\n# The co"..., 8192) = 2713
+     0.000019 read(3, "", 4096)         = 0
+     0.000235 write(1, "0.003: OLTP Version 3.0  persona"..., 57) = 57
+     0.000024 write(1, "0.003: Populating and pre-alloca"..., 46) = 46
+     0.000031 stat("/home/j/hd3/tmp/logfile", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+     0.000089 write(1, "0.003: logfile populated: 1 file"..., 114) = 114
+     0.000023 stat("/home/j/hd3/tmp/logfile", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+     0.000022 write(1, "0.003: Reusing existing logfile "..., 37) = 37
+     0.000020 write(1, "0.003: Pre-allocating files in l"..., 44) = 44
+     0.000027 stat("/home/j/hd3/tmp/logfile/00000001/00000001", {st_mode=S_IFREG|0644, st_size=10485760, ...}) = 0
+     0.000021 openat(AT_FDCWD, "/home/j/hd3/tmp/logfile/00000001/00000001", O_RDWR) = 5
+     0.000019 close(5)                  = 0
+     0.000018 stat("/home/j/hd3/tmp/datafiles", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+     0.000036 write(1, "0.003: datafiles populated: 10 f"..., 118) = 118
+     0.000021 stat("/home/j/hd3/tmp/datafiles", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+     0.000020 write(1, "0.003: Reusing existing datafile"..., 39) = 39
+     0.000020 write(1, "0.003: Pre-allocating files in d"..., 46) = 46
+     0.000020 stat("/home/j/hd3/tmp/datafiles/00000001/00000006", {st_mode=S_IFREG|0644, st_size=10485760, ...}) = 0
+     0.000020 openat(AT_FDCWD, "/home/j/hd3/tmp/datafiles/00000001/00000006", O_RDWR) = 5
+     0.000019 close(5)                  = 0
+     0.000017 stat("/home/j/hd3/tmp/datafiles/00000001/00000001", {st_mode=S_IFREG|0644, st_size=10485760, ...}) = 0
+     0.000020 openat(AT_FDCWD, "/home/j/hd3/tmp/datafiles/00000001/00000001", O_RDWR) = 5
+     0.000019 close(5)                  = 0
+     0.000017 stat("/home/j/hd3/tmp/datafiles/00000001/00000007", {st_mode=S_IFREG|0644, st_size=10485760, ...}) = 0
+     0.000020 openat(AT_FDCWD, "/home/j/hd3/tmp/datafiles/00000001/00000007", O_RDWR) = 5
+     0.000018 close(5)                  = 0
+     0.000017 stat("/home/j/hd3/tmp/datafiles/00000001/00000005", {st_mode=S_IFREG|0644, st_size=10485760, ...}) = 0
+     0.000020 openat(AT_FDCWD, "/home/j/hd3/tmp/datafiles/00000001/00000005", O_RDWR) = 5
+     0.000019 close(5)                  = 0
+     0.000017 stat("/home/j/hd3/tmp/datafiles/00000001/00000010", {st_mode=S_IFREG|0644, st_size=10485760, ...}) = 0
+     0.000019 openat(AT_FDCWD, "/home/j/hd3/tmp/datafiles/00000001/00000010", O_RDWR) = 5
+     0.000019 close(5)                  = 0
+     0.000016 stat("/home/j/hd3/tmp/datafiles/00000001/00000002", {st_mode=S_IFREG|0644, st_size=10485760, ...}) = 0
+     0.000021 openat(AT_FDCWD, "/home/j/hd3/tmp/datafiles/00000001/00000002", O_RDWR) = 5
+     0.000023 close(5)                  = 0
+     0.000019 stat("/home/j/hd3/tmp/datafiles/00000001/00000008", {st_mode=S_IFREG|0644, st_size=10485760, ...}) = 0
+     0.000025 openat(AT_FDCWD, "/home/j/hd3/tmp/datafiles/00000001/00000008", O_RDWR) = 5
+     0.000021 close(5)                  = 0
+     0.000016 stat("/home/j/hd3/tmp/datafiles/00000001/00000009", {st_mode=S_IFREG|0644, st_size=10485760, ...}) = 0
+     0.000020 openat(AT_FDCWD, "/home/j/hd3/tmp/datafiles/00000001/00000009", O_RDWR) = 5
+     0.000018 close(5)                  = 0
+     0.000016 stat("/home/j/hd3/tmp/datafiles/00000001/00000004", {st_mode=S_IFREG|0644, st_size=10485760, ...}) = 0
+     0.000019 openat(AT_FDCWD, "/home/j/hd3/tmp/datafiles/00000001/00000004", O_RDWR) = 5
+     0.000018 close(5)                  = 0
+     0.000017 stat("/home/j/hd3/tmp/datafiles/00000001/00000003", {st_mode=S_IFREG|0644, st_size=10485760, ...}) = 0
+     0.000019 openat(AT_FDCWD, "/home/j/hd3/tmp/datafiles/00000001/00000003", O_RDWR) = 5
+     0.000018 close(5)                  = 0
+     0.000018 write(1, "0.004: Waiting for pre-allocatio"..., 83) = 83
+     0.000020 write(1, "0.004: Population and pre-alloca"..., 59) = 59
+     0.000020 mmap(NULL, 8392704, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7fffea371000
+     0.000018 mprotect(0x7fffea372000, 8388608, PROT_READ|PROT_WRITE) = 0
+     0.000022 clone(child_stack=0x7fffeab70fb0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7fffeab719d0, tls=0x7fffeab71700, child_tidptr=0x7fffeab719d0) = 20152
+     0.000033 rt_sigaction(SIGUSR1, {sa_handler=0x55555556b520, sa_mask=[USR1], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7ffff7059f20}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+     0.031373 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdbe0) = 0
+     1.000197 shmget(IPC_PRIVATE, 221249536, IPC_CREAT|0666) = 2129928
+     0.000033 shmat(2129928, NULL, 0)   = 0x7fffdd071000
+     0.000026 futex(0x7fffec3b3158, FUTEX_WAKE, 2147483647) = 1
+     0.000033 write(1, "1.036: Running...\n", 18) = 18
+     0.000620 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000129 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000135 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000122 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000125 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000125 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.172204 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000133 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000129 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000131 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.055126 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000139 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000129 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000131 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000132 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000132 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.053337 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000132 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000129 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000115 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000130 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000130 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000132 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000133 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000130 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000133 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000132 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+    20.827089 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000140 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000129 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000124 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000125 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000129 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000128 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000126 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.005555 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000120 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000118 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000118 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000118 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000115 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000121 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000118 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000116 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000120 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000119 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000118 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000120 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000102 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000116 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000118 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000115 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000118 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000121 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000116 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000116 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000116 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000118 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000116 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000117 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000116 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000116 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000117 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000124 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000114 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000116 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000115 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000115 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000117 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000114 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000114 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000117 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000114 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000116 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000117 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000115 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000117 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000119 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000115 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000115 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000120 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000117 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000120 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000117 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000117 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000122 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000116 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000115 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000117 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000118 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000117 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000116 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000119 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000114 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000118 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000116 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000116 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000119 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000116 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000117 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000117 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000118 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000117 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000118 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000261 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000228 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000244 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000204 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000194 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000223 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000246 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000258 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000256 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000260 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000305 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000258 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000247 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000208 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000247 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000291 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000274 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000253 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000254 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000258 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000313 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000237 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000232 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000265 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000258 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000309 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000229 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.009798 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000243 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000215 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000245 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000259 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000262 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000263 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000305 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000323 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000253 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000210 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000176 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000271 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000201 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000182 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000229 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000235 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000246 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000221 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000249 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000242 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000237 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000289 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000253 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000228 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000253 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000247 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000275 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000246 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000245 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000203 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000238 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000298 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000227 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000244 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000250 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000203 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000223 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000251 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000213 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000202 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000244 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000295 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000256 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000243 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000205 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000213 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000290 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.005846 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000196 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000242 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000200 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000236 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000216 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000235 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000225 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000239 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000207 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000221 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000199 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000187 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000281 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000260 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000240 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000241 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000179 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000250 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000253 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000204 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000246 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000251 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000297 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000277 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000250 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000263 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000270 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000300 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000260 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000207 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000197 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000200 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000226 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000196 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000192 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000199 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000252 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000250 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000218 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000203 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000249 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000263 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000305 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000275 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000211 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000196 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000200 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000217 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000179 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000185 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000195 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000205 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000229 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000225 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000226 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.004813 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000283 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000236 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000215 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000193 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000223 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.055650 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000255 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000218 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000300 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000252 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.018143 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000253 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000236 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000208 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000191 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000202 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.056661 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000268 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000262 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000220 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000233 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.106186 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000245 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     9.334141 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000219 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000165 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000227 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000213 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000223 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.023473 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000227 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000218 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000267 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.113104 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000206 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000243 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000244 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000223 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.175750 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000195 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000212 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000225 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000211 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.035956 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000175 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000200 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000236 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000230 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.072056 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000258 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000208 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000217 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000229 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000271 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000190 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000253 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000229 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000188 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000209 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     8.292447 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000319 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000279 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000203 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.000192 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdc00) = 0
+     1.105857 write(1, "337.509: Run took 300 seconds..."..., 33) = 33
+     0.007026 mmap(NULL, 1052672, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7ffff7edb000
+     0.000107 write(1, "337.621: Per-Operation Breakdown"..., 1024) = 1024
+     0.000116 write(1, "            50ops        0ops/s "..., 76) = 76
+     0.000036 munmap(0x7ffff7edb000, 1052672) = 0
+     0.000042 write(1, "337.622: IO Summary: 338012 ops "..., 82) = 82
+     0.000037 write(1, "337.622: Shutting down processes"..., 33) = 33
+     0.000041 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdbb0) = 0
+     1.000114 kill(20477, SIGUSR1)      = 0
+     0.000132 wait4(20477, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20477
+     0.000235 getpid()                  = 20150
+     0.000019 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000034 kill(20476, SIGUSR1)      = 0
+     0.000110 wait4(20476, 0x7fffffffdc04, 0, NULL) = -1 ECHILD (No child processes)
+     0.729045 getpid()                  = 20150
+     0.000054 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000026 nanosleep({tv_sec=1, tv_nsec=0}, 0x7fffffffdbb0) = 0
+     1.000135 kill(20473, SIGUSR1)      = 0
+     0.000046 wait4(20473, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20473
+     0.226608 getpid()                  = 20150
+     0.000024 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000033 kill(20470, SIGUSR1)      = 0
+     0.000055 wait4(20470, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20470
+     0.139902 getpid()                  = 20150
+     0.000022 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000024 kill(20469, SIGUSR1)      = 0
+     0.000055 wait4(20469, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20469
+     0.224673 getpid()                  = 20150
+     0.000026 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000021 kill(20468, SIGUSR1)      = 0
+     0.000022 wait4(20468, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20468
+     0.166780 getpid()                  = 20150
+     0.000024 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000024 kill(20467, SIGUSR1)      = 0
+     0.000060 wait4(20467, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20467
+     0.066380 getpid()                  = 20150
+     0.000019 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000020 kill(20466, SIGUSR1)      = 0
+     0.000021 wait4(20466, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20466
+     0.000243 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000018 kill(20465, SIGUSR1)      = 0
+     0.000044 wait4(20465, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20465
+     0.000211 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000020 kill(20464, SIGUSR1)      = 0
+     0.000040 wait4(20464, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20464
+     0.000180 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000018 kill(20463, SIGUSR1)      = 0
+     0.000019 wait4(20463, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20463
+     0.000190 getpid()                  = 20150
+     0.000016 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000018 kill(20462, SIGUSR1)      = 0
+     0.000019 wait4(20462, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20462
+     0.000228 getpid()                  = 20150
+     0.000016 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000018 kill(20461, SIGUSR1)      = 0
+     0.000019 wait4(20461, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20461
+     0.000177 getpid()                  = 20150
+     0.000016 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000018 kill(20460, SIGUSR1)      = 0
+     0.000018 wait4(20460, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20460
+     0.000244 getpid()                  = 20150
+     0.000016 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000017 kill(20459, SIGUSR1)      = 0
+     0.000019 wait4(20459, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20459
+     0.000205 getpid()                  = 20150
+     0.000016 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000017 kill(20458, SIGUSR1)      = 0
+     0.000019 wait4(20458, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20458
+     0.000231 getpid()                  = 20150
+     0.000016 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000017 kill(20457, SIGUSR1)      = 0
+     0.000020 wait4(20457, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20457
+     0.000259 getpid()                  = 20150
+     0.000016 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000017 kill(20456, SIGUSR1)      = 0
+     0.000020 wait4(20456, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20456
+     0.000200 getpid()                  = 20150
+     0.000016 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000018 kill(20455, SIGUSR1)      = 0
+     0.000026 wait4(20455, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20455
+     0.000167 getpid()                  = 20150
+     0.000016 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000018 kill(20454, SIGUSR1)      = 0
+     0.000020 wait4(20454, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20454
+     0.000169 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000018 kill(20453, SIGUSR1)      = 0
+     0.000024 wait4(20453, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20453
+     0.000199 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20452, SIGUSR1)      = 0
+     0.000021 wait4(20452, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20452
+     0.000179 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20451, SIGUSR1)      = 0
+     0.000032 wait4(20451, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20451
+     0.000220 getpid()                  = 20150
+     0.000016 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000023 kill(20450, SIGUSR1)      = 0
+     0.000020 wait4(20450, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20450
+     0.000289 getpid()                  = 20150
+     0.000016 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000018 kill(20449, SIGUSR1)      = 0
+     0.000045 wait4(20449, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20449
+     0.000200 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000020 kill(20448, SIGUSR1)      = 0
+     0.000043 wait4(20448, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20448
+     0.000222 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000020 kill(20447, SIGUSR1)      = 0
+     0.000021 wait4(20447, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20447
+     0.000253 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20446, SIGUSR1)      = 0
+     0.000034 wait4(20446, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20446
+     0.000237 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20445, SIGUSR1)      = 0
+     0.000020 wait4(20445, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20445
+     0.000223 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000018 kill(20444, SIGUSR1)      = 0
+     0.000020 wait4(20444, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20444
+     0.000231 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000018 kill(20443, SIGUSR1)      = 0
+     0.000025 wait4(20443, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20443
+     0.000208 getpid()                  = 20150
+     0.000020 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000022 kill(20442, SIGUSR1)      = 0
+     0.000043 wait4(20442, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20442
+     0.000220 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20441, SIGUSR1)      = 0
+     0.000041 wait4(20441, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20441
+     0.000179 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000018 kill(20440, SIGUSR1)      = 0
+     0.000041 wait4(20440, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20440
+     0.000220 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000018 kill(20439, SIGUSR1)      = 0
+     0.000034 wait4(20439, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20439
+     0.000186 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000018 kill(20438, SIGUSR1)      = 0
+     0.000039 wait4(20438, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20438
+     0.000179 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000018 kill(20437, SIGUSR1)      = 0
+     0.000022 wait4(20437, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20437
+     0.000414 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20436, SIGUSR1)      = 0
+     0.000020 wait4(20436, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20436
+     0.000254 getpid()                  = 20150
+     0.000016 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20435, SIGUSR1)      = 0
+     0.000022 wait4(20435, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20435
+     0.000210 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000018 kill(20434, SIGUSR1)      = 0
+     0.000022 wait4(20434, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20434
+     0.000192 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20433, SIGUSR1)      = 0
+     0.000039 wait4(20433, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20433
+     0.000189 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20432, SIGUSR1)      = 0
+     0.000026 wait4(20432, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20432
+     0.000209 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20431, SIGUSR1)      = 0
+     0.000022 wait4(20431, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20431
+     0.000264 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000022 kill(20430, SIGUSR1)      = 0
+     0.000039 wait4(20430, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20430
+     0.000210 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000020 kill(20429, SIGUSR1)      = 0
+     0.000036 wait4(20429, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20429
+     0.000204 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000020 kill(20428, SIGUSR1)      = 0
+     0.000042 wait4(20428, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20428
+     0.000188 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20427, SIGUSR1)      = 0
+     0.000041 wait4(20427, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20427
+     0.000215 getpid()                  = 20150
+     0.000015 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000016 kill(20426, SIGUSR1)      = 0
+     0.000035 wait4(20426, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20426
+     0.000263 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000018 kill(20425, SIGUSR1)      = 0
+     0.000022 wait4(20425, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20425
+     0.000237 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000018 kill(20424, SIGUSR1)      = 0
+     0.000020 wait4(20424, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20424
+     0.000242 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000018 kill(20423, SIGUSR1)      = 0
+     0.000019 wait4(20423, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20423
+     0.000216 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000018 kill(20422, SIGUSR1)      = 0
+     0.000036 wait4(20422, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20422
+     0.000225 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20421, SIGUSR1)      = 0
+     0.000035 wait4(20421, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20421
+     0.000189 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000020 kill(20420, SIGUSR1)      = 0
+     0.000036 wait4(20420, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20420
+     0.000216 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20419, SIGUSR1)      = 0
+     0.000035 wait4(20419, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20419
+     0.000190 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000018 kill(20418, SIGUSR1)      = 0
+     0.000025 wait4(20418, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20418
+     0.000252 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20417, SIGUSR1)      = 0
+     0.000023 wait4(20417, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20417
+     0.000199 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20416, SIGUSR1)      = 0
+     0.000019 wait4(20416, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20416
+     0.000238 getpid()                  = 20150
+     0.000016 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20414, SIGUSR1)      = 0
+     0.000019 wait4(20414, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20414
+     0.000219 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000020 kill(20412, SIGUSR1)      = 0
+     0.000034 wait4(20412, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20412
+     0.000179 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000018 kill(20411, SIGUSR1)      = 0
+     0.000020 wait4(20411, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20411
+     0.000188 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20408, SIGUSR1)      = 0
+     0.000036 wait4(20408, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20408
+     0.000190 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000018 kill(20407, SIGUSR1)      = 0
+     0.000041 wait4(20407, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20407
+     0.000232 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000023 kill(20403, SIGUSR1)      = 0
+     0.000019 wait4(20403, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20403
+     0.000245 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000018 kill(20401, SIGUSR1)      = 0
+     0.000020 wait4(20401, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20401
+     0.000202 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20399, SIGUSR1)      = 0
+     0.000040 wait4(20399, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20399
+     0.000220 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20396, SIGUSR1)      = 0
+     0.000020 wait4(20396, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20396
+     0.000239 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000018 kill(20395, SIGUSR1)      = 0
+     0.000035 wait4(20395, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20395
+     0.000210 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000018 kill(20394, SIGUSR1)      = 0
+     0.000023 wait4(20394, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20394
+     0.000203 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20393, SIGUSR1)      = 0
+     0.000039 wait4(20393, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20393
+     0.000219 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000018 kill(20392, SIGUSR1)      = 0
+     0.000020 wait4(20392, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20392
+     0.000229 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000018 kill(20389, SIGUSR1)      = 0
+     0.000020 wait4(20389, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20389
+     0.000235 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000018 kill(20386, SIGUSR1)      = 0
+     0.000030 wait4(20386, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20386
+     0.000181 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000024 kill(20384, SIGUSR1)      = 0
+     0.000020 wait4(20384, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20384
+     0.000205 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20382, SIGUSR1)      = 0
+     0.000037 wait4(20382, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20382
+     0.000188 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000018 kill(20381, SIGUSR1)      = 0
+     0.000041 wait4(20381, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20381
+     0.000224 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20379, SIGUSR1)      = 0
+     0.000036 wait4(20379, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20379
+     0.000198 getpid()                  = 20150
+     0.000019 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000021 kill(20378, SIGUSR1)      = 0
+     0.000021 wait4(20378, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20378
+     0.000262 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20377, SIGUSR1)      = 0
+     0.000040 wait4(20377, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20377
+     0.000220 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000018 kill(20376, SIGUSR1)      = 0
+     0.000035 wait4(20376, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20376
+     0.000194 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20374, SIGUSR1)      = 0
+     0.000020 wait4(20374, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20374
+     0.000200 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20371, SIGUSR1)      = 0
+     0.000019 wait4(20371, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20371
+     0.000196 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000018 kill(20370, SIGUSR1)      = 0
+     0.000033 wait4(20370, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20370
+     0.000263 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000018 kill(20367, SIGUSR1)      = 0
+     0.000020 wait4(20367, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20367
+     0.000272 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000022 kill(20365, SIGUSR1)      = 0
+     0.000030 wait4(20365, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20365
+     0.000253 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000018 kill(20364, SIGUSR1)      = 0
+     0.000031 wait4(20364, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20364
+     0.000184 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000020 kill(20363, SIGUSR1)      = 0
+     0.000035 wait4(20363, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20363
+     0.000197 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000026 kill(20361, SIGUSR1)      = 0
+     0.000023 wait4(20361, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20361
+     0.000186 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20360, SIGUSR1)      = 0
+     0.000021 wait4(20360, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20360
+     0.000185 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20359, SIGUSR1)      = 0
+     0.000025 wait4(20359, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20359
+     0.000182 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20357, SIGUSR1)      = 0
+     0.000019 wait4(20357, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20357
+     0.000262 getpid()                  = 20150
+     0.000020 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000022 kill(20355, SIGUSR1)      = 0
+     0.000033 wait4(20355, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20355
+     0.000213 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20354, SIGUSR1)      = 0
+     0.000022 wait4(20354, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20354
+     0.000213 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20352, SIGUSR1)      = 0
+     0.000032 wait4(20352, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20352
+     0.000218 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000020 kill(20350, SIGUSR1)      = 0
+     0.000034 wait4(20350, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20350
+     0.000229 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000020 kill(20348, SIGUSR1)      = 0
+     0.000025 wait4(20348, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20348
+     0.000285 getpid()                  = 20150
+     0.000019 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000020 kill(20347, SIGUSR1)      = 0
+     0.000021 wait4(20347, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20347
+     0.000192 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000020 kill(20346, SIGUSR1)      = 0
+     0.000026 wait4(20346, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20346
+     0.000254 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000018 kill(20345, SIGUSR1)      = 0
+     0.000020 wait4(20345, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20345
+     0.000188 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000018 kill(20344, SIGUSR1)      = 0
+     0.000042 wait4(20344, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20344
+     0.000207 getpid()                  = 20150
+     0.000016 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000016 kill(20342, SIGUSR1)      = 0
+     0.000031 wait4(20342, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20342
+     0.000234 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000017 kill(20339, SIGUSR1)      = 0
+     0.000029 wait4(20339, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20339
+     0.000201 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000018 kill(20338, SIGUSR1)      = 0
+     0.000029 wait4(20338, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20338
+     0.000229 getpid()                  = 20150
+     0.000023 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000021 kill(20335, SIGUSR1)      = 0
+     0.000021 wait4(20335, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20335
+     0.000226 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000024 kill(20333, SIGUSR1)      = 0
+     0.000036 wait4(20333, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20333
+     0.000176 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000018 kill(20331, SIGUSR1)      = 0
+     0.000020 wait4(20331, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20331
+     0.000282 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20330, SIGUSR1)      = 0
+     0.000036 wait4(20330, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20330
+     0.000201 getpid()                  = 20150
+     0.000015 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000016 kill(20329, SIGUSR1)      = 0
+     0.000037 wait4(20329, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20329
+     0.000199 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20328, SIGUSR1)      = 0
+     0.000034 wait4(20328, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20328
+     0.000233 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20327, SIGUSR1)      = 0
+     0.000020 wait4(20327, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20327
+     0.000221 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20325, SIGUSR1)      = 0
+     0.000019 wait4(20325, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20325
+     0.000203 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000018 kill(20322, SIGUSR1)      = 0
+     0.000019 wait4(20322, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20322
+     0.000181 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20320, SIGUSR1)      = 0
+     0.000020 wait4(20320, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20320
+     0.000198 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000018 kill(20318, SIGUSR1)      = 0
+     0.000034 wait4(20318, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20318
+     0.000175 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20316, SIGUSR1)      = 0
+     0.000027 wait4(20316, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20316
+     0.000179 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20314, SIGUSR1)      = 0
+     0.000027 wait4(20314, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20314
+     0.000170 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20312, SIGUSR1)      = 0
+     0.000039 wait4(20312, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20312
+     0.000228 getpid()                  = 20150
+     0.000016 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20311, SIGUSR1)      = 0
+     0.000028 wait4(20311, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20311
+     0.000255 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20310, SIGUSR1)      = 0
+     0.000018 wait4(20310, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20310
+     0.000179 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000021 kill(20308, SIGUSR1)      = 0
+     0.000032 wait4(20308, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20308
+     0.000234 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000020 kill(20306, SIGUSR1)      = 0
+     0.000024 wait4(20306, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20306
+     0.000228 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20304, SIGUSR1)      = 0
+     0.000020 wait4(20304, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20304
+     0.000199 getpid()                  = 20150
+     0.000015 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000016 kill(20302, SIGUSR1)      = 0
+     0.000019 wait4(20302, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20302
+     0.000182 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20301, SIGUSR1)      = 0
+     0.000033 wait4(20301, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20301
+     0.000218 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000020 kill(20299, SIGUSR1)      = 0
+     0.000019 wait4(20299, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20299
+     0.000257 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000023 kill(20298, SIGUSR1)      = 0
+     0.000023 wait4(20298, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20298
+     0.000204 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000018 kill(20296, SIGUSR1)      = 0
+     0.000035 wait4(20296, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20296
+     0.000230 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000018 kill(20294, SIGUSR1)      = 0
+     0.000031 wait4(20294, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20294
+     0.000247 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20292, SIGUSR1)      = 0
+     0.000030 wait4(20292, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20292
+     0.000189 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000016 kill(20289, SIGUSR1)      = 0
+     0.000030 wait4(20289, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20289
+     0.000182 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000020 kill(20288, SIGUSR1)      = 0
+     0.000032 wait4(20288, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20288
+     0.000235 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000018 kill(20287, SIGUSR1)      = 0
+     0.000025 wait4(20287, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20287
+     0.000187 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20285, SIGUSR1)      = 0
+     0.000034 wait4(20285, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20285
+     0.000266 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000020 kill(20284, SIGUSR1)      = 0
+     0.000027 wait4(20284, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20284
+     0.000200 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000023 kill(20281, SIGUSR1)      = 0
+     0.000021 wait4(20281, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20281
+     0.000260 getpid()                  = 20150
+     0.000016 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20278, SIGUSR1)      = 0
+     0.000036 wait4(20278, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20278
+     0.000214 getpid()                  = 20150
+     0.000016 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000017 kill(20276, SIGUSR1)      = 0
+     0.000020 wait4(20276, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20276
+     0.000229 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20274, SIGUSR1)      = 0
+     0.000035 wait4(20274, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20274
+     0.000212 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20273, SIGUSR1)      = 0
+     0.000020 wait4(20273, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20273
+     0.000207 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000018 kill(20271, SIGUSR1)      = 0
+     0.000019 wait4(20271, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20271
+     0.000187 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000017 kill(20270, SIGUSR1)      = 0
+     0.000022 wait4(20270, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20270
+     0.000235 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20269, SIGUSR1)      = 0
+     0.000021 wait4(20269, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20269
+     0.000195 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20266, SIGUSR1)      = 0
+     0.000019 wait4(20266, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20266
+     0.000194 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20263, SIGUSR1)      = 0
+     0.000026 wait4(20263, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20263
+     0.000219 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20261, SIGUSR1)      = 0
+     0.000031 wait4(20261, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20261
+     0.000304 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000024 kill(20259, SIGUSR1)      = 0
+     0.000026 wait4(20259, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20259
+     0.000217 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20257, SIGUSR1)      = 0
+     0.000022 wait4(20257, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20257
+     0.000225 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000018 kill(20255, SIGUSR1)      = 0
+     0.000022 wait4(20255, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20255
+     0.000198 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20254, SIGUSR1)      = 0
+     0.000021 wait4(20254, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20254
+     0.000228 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000021 kill(20252, SIGUSR1)      = 0
+     0.000040 wait4(20252, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20252
+     0.000178 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20248, SIGUSR1)      = 0
+     0.000020 wait4(20248, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20248
+     0.000244 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000018 kill(20246, SIGUSR1)      = 0
+     0.000030 wait4(20246, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20246
+     0.000177 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20244, SIGUSR1)      = 0
+     0.000031 wait4(20244, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20244
+     0.000237 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000018 kill(20242, SIGUSR1)      = 0
+     0.000028 wait4(20242, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20242
+     0.000211 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20241, SIGUSR1)      = 0
+     0.000027 wait4(20241, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20241
+     0.000186 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000018 kill(20239, SIGUSR1)      = 0
+     0.000262 wait4(20239, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20239
+     0.000203 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20238, SIGUSR1)      = 0
+     0.000024 wait4(20238, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20238
+     0.000172 getpid()                  = 20150
+     0.000019 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20236, SIGUSR1)      = 0
+     0.000021 wait4(20236, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20236
+     0.000182 getpid()                  = 20150
+     0.000016 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20234, SIGUSR1)      = 0
+     0.000030 wait4(20234, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20234
+     0.000219 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000017 kill(20232, SIGUSR1)      = 0
+     0.000030 wait4(20232, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20232
+     0.000181 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000017 kill(20231, SIGUSR1)      = 0
+     0.000036 wait4(20231, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20231
+     0.000198 getpid()                  = 20150
+     0.000015 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000017 kill(20227, SIGUSR1)      = 0
+     0.000030 wait4(20227, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20227
+     0.000226 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000018 kill(20226, SIGUSR1)      = 0
+     0.000034 wait4(20226, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20226
+     0.000243 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000021 kill(20225, SIGUSR1)      = 0
+     0.000031 wait4(20225, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20225
+     0.000198 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000024 kill(20224, SIGUSR1)      = 0
+     0.000027 wait4(20224, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20224
+     0.000234 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20222, SIGUSR1)      = 0
+     0.000028 wait4(20222, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20222
+     0.000191 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000023 kill(20221, SIGUSR1)      = 0
+     0.000027 wait4(20221, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20221
+     0.000184 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20220, SIGUSR1)      = 0
+     0.000035 wait4(20220, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20220
+     0.000185 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000018 kill(20218, SIGUSR1)      = 0
+     0.000031 wait4(20218, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20218
+     0.000184 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20216, SIGUSR1)      = 0
+     0.000033 wait4(20216, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20216
+     0.000261 getpid()                  = 20150
+     0.000019 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20214, SIGUSR1)      = 0
+     0.000019 wait4(20214, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20214
+     0.000218 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000018 kill(20212, SIGUSR1)      = 0
+     0.000019 wait4(20212, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20212
+     0.000220 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000020 kill(20211, SIGUSR1)      = 0
+     0.000019 wait4(20211, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20211
+     0.000204 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000025 kill(20210, SIGUSR1)      = 0
+     0.000021 wait4(20210, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20210
+     0.000195 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20209, SIGUSR1)      = 0
+     0.000026 wait4(20209, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20209
+     0.000175 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000018 kill(20208, SIGUSR1)      = 0
+     0.000033 wait4(20208, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20208
+     0.000169 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20206, SIGUSR1)      = 0
+     0.000026 wait4(20206, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20206
+     0.000267 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000018 kill(20204, SIGUSR1)      = 0
+     0.000032 wait4(20204, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20204
+     0.000191 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000020 kill(20203, SIGUSR1)      = 0
+     0.000019 wait4(20203, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20203
+     0.000228 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000024 kill(20201, SIGUSR1)      = 0
+     0.000020 wait4(20201, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20201
+     0.000202 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000018 kill(20198, SIGUSR1)      = 0
+     0.000031 wait4(20198, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20198
+     0.000189 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20197, SIGUSR1)      = 0
+     0.000032 wait4(20197, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20197
+     0.000263 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20192, SIGUSR1)      = 0
+     0.000022 wait4(20192, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20192
+     0.000216 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000018 kill(20190, SIGUSR1)      = 0
+     0.000019 wait4(20190, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20190
+     0.000205 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20188, SIGUSR1)      = 0
+     0.000020 wait4(20188, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20188
+     0.000168 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20187, SIGUSR1)      = 0
+     0.000030 wait4(20187, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20187
+     0.000183 getpid()                  = 20150
+     0.000019 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000022 kill(20184, SIGUSR1)      = 0
+     0.000029 wait4(20184, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20184
+     0.000174 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20183, SIGUSR1)      = 0
+     0.000021 wait4(20183, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20183
+     0.000283 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000020 kill(20182, SIGUSR1)      = 0
+     0.000031 wait4(20182, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20182
+     0.000205 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20181, SIGUSR1)      = 0
+     0.000020 wait4(20181, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20181
+     0.000165 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000018 kill(20179, SIGUSR1)      = 0
+     0.000030 wait4(20179, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20179
+     0.000267 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20178, SIGUSR1)      = 0
+     0.000032 wait4(20178, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20178
+     0.000191 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000020 kill(20177, SIGUSR1)      = 0
+     0.000022 wait4(20177, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20177
+     0.000239 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000020 kill(20175, SIGUSR1)      = 0
+     0.000023 wait4(20175, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20175
+     0.000214 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000024 kill(20169, SIGUSR1)      = 0
+     0.000031 wait4(20169, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20169
+     0.000213 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20165, SIGUSR1)      = 0
+     0.000028 wait4(20165, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20165
+     0.000182 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20163, SIGUSR1)      = 0
+     0.000020 wait4(20163, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20163
+     0.000177 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20162, SIGUSR1)      = 0
+     0.000019 wait4(20162, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20162
+     0.000176 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20161, SIGUSR1)      = 0
+     0.000025 wait4(20161, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20161
+     0.000180 getpid()                  = 20150
+     0.000019 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20160, SIGUSR1)      = 0
+     0.000022 wait4(20160, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20160
+     0.000230 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20159, SIGUSR1)      = 0
+     0.000027 wait4(20159, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20159
+     0.000235 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000019 kill(20158, SIGUSR1)      = 0
+     0.000025 wait4(20158, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20158
+     0.000180 getpid()                  = 20150
+     0.000018 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000020 kill(20157, SIGUSR1)      = 0
+     0.000025 wait4(20157, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20157
+     0.000235 getpid()                  = 20150
+     0.000019 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000021 kill(20156, SIGUSR1)      = 0
+     0.000034 wait4(20156, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20156
+     0.000260 getpid()                  = 20150
+     0.000020 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000020 kill(20155, SIGUSR1)      = 0
+     0.000028 wait4(20155, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20155
+     0.000208 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000017 kill(20154, SIGUSR1)      = 0
+     0.000266 wait4(20154, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20154
+     0.000025 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000017 kill(20153, SIGUSR1)      = 0
+     0.000033 wait4(20153, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGUSR1}], 0, NULL) = 20153
+     0.000217 getpid()                  = 20150
+     0.000017 wait4(-20150, 0x7fffffffdc04, WNOHANG, NULL) = -1 ECHILD (No child processes)
+     0.000023 futex(0x7fffec3b3038, FUTEX_WAKE, 1) = 1
+     0.000021 shmctl(2129928, IPC_RMID, NULL) = 0
+     0.000018 semctl(98305, 0, IPC_RMID, NULL) = 0
+     0.000020 unlink("/tmp/filebench-shm-sbs9hh") = 0
+     0.000050 unlink("/tmp/filebench_shm") = -1 ENOENT (No such file or directory)
+     0.000022 futex(0x7ffff7ffd968, FUTEX_WAIT_PRIVATE, 2, NULL) = 0
+     0.000038 futex(0x7ffff7ffd968, FUTEX_WAKE_PRIVATE, 1) = 0
+     0.000046 exit_group(0)             = ?
+     0.013122 +++ exited with 0 +++
