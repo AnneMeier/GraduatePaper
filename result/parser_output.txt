@@ -1,0 +1,434 @@
+ ./result_fio_2/psync_100_rw_50.txt 
+
+{3338: {3: 0, 4: 0, 5: 0, 6: 0, 7: 0}, 3355: {3: 0}, 3353: {3: 0}}
+{'read': 264, 'pread64': 72396, 'readv': 0, 'preadv': 0, 'io_getevents': 0, 'preadv2': 0}
+{'write': 80, 'pwrite64': 71900, 'writev': 0, 'pwritev': 0, 'io_submit': 0, 'pwritev2': 0}
+{'open': 0, 'openat': 436, 'io_setup': 0}
+{'fsync': 1460, 'sync': 0}
+{3338: {}, 3355: {}, 3353: {}}
+{3338: {}, 3355: {}, 3353: {}}
+request size     (mean, std, size): 4088.8403350880953 167.9466195845932 144559
+sync interval    (mean, std, size): 100.0 0.0 718
+seq request size (mean, std, size): 2230485.547169811 25576057.040348757 265
+seq, rand 2 263
+seq vs rand: 577184.0 KB / 41.263671875 KB
+
+
+ ./result_fio_2/libaio_100_rw_50.txt
+
+{17545: {3: 0, 4: 0, 5: 0, 6: 0, 7: 0}, 17562: {3: 0, '0x7ffff7fe4000': 0}, 17561: {3: 0}}
+{'read': 264, 'pread64': 0, 'readv': 0, 'preadv': 0, 'io_getevents': 179062, 'preadv2': 0}
+{'write': 82, 'pwrite64': 0, 'writev': 0, 'pwritev': 0, 'io_submit': 179062, 'pwritev2': 0}
+{'open': 0, 'openat': 467, 'io_setup': 1}
+{'fsync': 1783, 'sync': 0}
+{17545: {}, 17562: {'0x7ffff7fe4000': '0x7ffff7fe4000'}, 17561: {}}
+{17545: {}, 17562: {'0x7ffff7fe4000': '0x7ffff7fe4000'}, 17561: {}}
+request size     (mean, std, size): 4093.1120771679775 106.72177475817081 358387
+sync interval    (mean, std, size): 100.37429854096521 99.66533602388982 1782
+seq request size (mean, std, size): 5535540.218867924 63476106.76393156 265
+seq, rand 2 263
+seq vs rand: 1432496.0 KB / 41.263671875 KB
+
+
+ ./result_fio_2/pvsync2_100_rw_50.txt
+
+{18174: {3: 0, 4: 0, 5: 0, 6: 0, 7: 0}, 18191: {3: 0}, 18190: {3: 0}}
+{'read': 265, 'pread64': 0, 'readv': 0, 'preadv': 0, 'io_getevents': 0, 'preadv2': 89912}
+{'write': 80, 'pwrite64': 0, 'writev': 0, 'pwritev': 0, 'io_submit': 0, 'pwritev2': 89647}
+{'open': 0, 'openat': 440, 'io_setup': 0}
+{'fsync': 1789, 'sync': 0}
+{18174: {}, 18191: {}, 18190: {}}
+{18174: {}, 18191: {}, 18190: {}}
+request size     (mean, std, size): 4090.2216234853163 150.9159883682665 179823
+sync interval    (mean, std, size): 100.0 0.0 895
+seq request size (mean, std, size): 2765097.454887218 31766746.878151216 266
+seq, rand 2 264
+seq vs rand: 718236.0 KB / 41.2685546875 KB
+
+
+ ./result_fio_2/vsync_100_rw_50.txt
+
+{16912: {3: 0, 4: 0, 5: 0, 6: 0, 7: 0}, 16930: {3: 0}, 16928: {3: 0}}
+{'read': 264, 'pread64': 0, 'readv': 84306, 'preadv': 0, 'io_getevents': 0, 'preadv2': 0}
+{'write': 80, 'pwrite64': 0, 'writev': 83983, 'pwritev': 0, 'io_submit': 0, 'pwritev2': 0}
+{'open': 0, 'openat': 467, 'io_setup': 0}
+{'fsync': 1679, 'sync': 0}
+{16912: {}, 16930: {}, 16928: {}}
+{16912: {}, 16930: {}, 16928: {}}
+request size     (mean, std, size): 4089.8594973657982 155.55466781415925 168552
+sync interval    (mean, std, size): 100.0 0.0 838
+seq request size (mean, std, size): 2601335.841509434 29828628.399977647 265
+seq, rand 2 263
+seq vs rand: 673156.0 KB / 41.263671875 KB
+
+
+ ./result_fio_2/sync_0_rw_0.txt
+
+{4274: {3: 0, 4: 0, 5: 0, 6: 0, 7: 0}, 4291: {3: 0}, 4289: {3: 0}}
+{'read': 264, 'pread64': 0, 'readv': 0, 'preadv': 0, 'io_getevents': 0, 'preadv2': 0}
+{'write': 924817, 'pwrite64': 0, 'writev': 0, 'pwritev': 0, 'io_submit': 0, 'pwritev2': 0}
+{'open': 0, 'openat': 575, 'io_setup': 0}
+{'fsync': 0, 'sync': 0}
+{4274: {}, 4291: {}, 4289: {}}
+{4274: {}, 4291: {}, 4289: {}}
+request size     (mean, std, size): 4094.8810924060867 66.44384202420487 925004
+seq request size (mean, std, size): 14186447.153558053 118130998.90352742 267
+seq, rand 4 263
+seq vs rand: 3698964.0 KB / 41.263671875 KB
+
+
+ ./result_fio_2/sync_0_rw_25.txt
+
+{4898: {3: 0, 4: 0, 5: 0, 6: 0, 7: 0}, 4915: {3: 0}, 4913: {3: 0}}
+{'read': 140247, 'pread64': 0, 'readv': 0, 'preadv': 0, 'io_getevents': 0, 'preadv2': 0}
+{'write': 417592, 'pwrite64': 0, 'writev': 0, 'pwritev': 0, 'io_submit': 0, 'pwritev2': 0}
+{'open': 0, 'openat': 539, 'io_setup': 0}
+{'fsync': 0, 'sync': 0}
+{4898: {}, 4915: {}, 4913: {}}
+{4898: {}, 4915: {}, 4913: {}}
+request size     (mean, std, size): 4094.144387231876 85.55802562016065 557764
+seq request size (mean, std, size): 8520769.962686567 83469591.11091897 268
+seq, rand 3 265
+seq vs rand: 2229988.0 KB / 57.263671875 KB
+
+
+ ./result_fio_2/sync_0_rw_50.txt
+
+{5521: {3: 0, 4: 0, 5: 0, 6: 0, 7: 0}, 5538: {3: 0}, 5536: {3: 0}}
+{'read': 238998, 'pread64': 0, 'readv': 0, 'preadv': 0, 'io_getevents': 0, 'preadv2': 0}
+{'write': 238901, 'pwrite64': 0, 'writev': 0, 'pwritev': 0, 'io_submit': 0, 'pwritev2': 0}
+{'open': 0, 'openat': 529, 'io_setup': 0}
+{'fsync': 0, 'sync': 0}
+{5521: {}, 5538: {}, 5536: {}}
+{5521: {}, 5538: {}, 5536: {}}
+request size     (mean, std, size): 4093.8339430417896 92.43467637847557 477824
+seq request size (mean, std, size): 2065609.4086589229 20355532.925308704 947
+seq, rand 156 791
+seq vs rand: 1899608.0 KB / 10677.263671875 KB
+
+
+ ./result_fio_2/sync_0_rw_100.txt
+
+{6144: {3: 0, 4: 0, 5: 0, 6: 0, 7: 0}, 6161: {3: 0}, 6160: {3: 0}}
+{'read': 1075005, 'pread64': 0, 'readv': 0, 'preadv': 0, 'io_getevents': 0, 'preadv2': 0}
+{'write': 75, 'pwrite64': 0, 'writev': 0, 'pwritev': 0, 'io_submit': 0, 'pwritev2': 0}
+{'open': 0, 'openat': 567, 'io_setup': 0}
+{'fsync': 0, 'sync': 0}
+{6144: {}, 6161: {}, 6160: {}}
+{6144: {}, 6161: {}, 6160: {}}
+request size     (mean, std, size): 4095.0372184661637 61.63538235731797 1075004
+seq request size (mean, std, size): 16426049.962686567 130310498.45848972 268
+seq, rand 5 263
+seq vs rand: 4298964.0 KB / 41.263671875 KB
+
+
+ ./result_fio_2/sync_0_randrw_0.txt
+
+{6767: {3: 0, 4: 0, 5: 0, 6: 0, 7: 0}, 6784: {3: 0}, 6782: {3: 0}}
+{'read': 265, 'pread64': 0, 'readv': 0, 'preadv': 0, 'io_getevents': 0, 'preadv2': 0}
+{'write': 29034, 'pwrite64': 0, 'writev': 0, 'pwritev': 0, 'io_submit': 0, 'pwritev2': 0}
+{'open': 0, 'openat': 428, 'io_setup': 0}
+{'fsync': 0, 'sync': 0}
+{6767: {}, 6784: {}, 6782: {}}
+{6767: {}, 6784: {}, 6782: {}}
+request size     (mean, std, size): 4060.441687769489 372.95465644317034 29222
+seq request size (mean, std, size): 4060.441687769489 372.95465644317034 29222
+seq, rand 0 29222
+seq vs rand: 0.0 KB / 115873.2685546875 KB
+
+
+ ./result_fio_2/sync_0_randrw_25.txt
+
+{7395: {3: 0, 4: 0, 5: 0, 6: 0, 7: 0}, 7412: {3: 0}, 7410: {3: 0}}
+{'read': 4366, 'pread64': 0, 'readv': 0, 'preadv': 0, 'io_getevents': 0, 'preadv2': 0}
+{'write': 12229, 'pwrite64': 0, 'writev': 0, 'pwritev': 0, 'io_submit': 0, 'pwritev2': 0}
+{'open': 0, 'openat': 428, 'io_setup': 0}
+{'fsync': 0, 'sync': 0}
+{7395: {}, 7412: {}, 7410: {}}
+{7395: {}, 7412: {}, 7410: {}}
+request size     (mean, std, size): 4033.101392251816 494.2912806914088 16520
+seq request size (mean, std, size): 4033.101392251816 494.2912806914089 16520
+seq, rand 0 16520
+seq vs rand: 0.0 KB / 65065.2685546875 KB
+
+
+ ./result_fio_2/sync_0_randrw_50.txt
+
+{8017: {3: 0, 4: 0, 5: 0, 6: 0, 7: 0}, 8034: {3: 0}, 8032: {3: 0}}
+{'read': 6438, 'pread64': 0, 'readv': 0, 'preadv': 0, 'io_getevents': 0, 'preadv2': 0}
+{'write': 6295, 'pwrite64': 0, 'writev': 0, 'pwritev': 0, 'io_submit': 0, 'pwritev2': 0}
+{'open': 0, 'openat': 429, 'io_setup': 0}
+{'fsync': 0, 'sync': 0}
+{8017: {}, 8034: {}, 8032: {}}
+{8017: {}, 8034: {}, 8032: {}}
+request size     (mean, std, size): 4014.2340022120397 562.1595535384023 12658
+seq request size (mean, std, size): 4014.2340022120397 562.1595535384023 12658
+seq, rand 0 12658
+seq vs rand: 0.0 KB / 49621.263671875 KB
+
+
+ ./result_fio_2/sync_0_randrw_100.txt
+
+{8640: {3: 0, 4: 0, 5: 0, 6: 0, 7: 0}, 8657: {3: 0}, 8656: {3: 0}}
+{'read': 9417, 'pread64': 0, 'readv': 0, 'preadv': 0, 'io_getevents': 0, 'preadv2': 0}
+{'write': 76, 'pwrite64': 0, 'writev': 0, 'pwritev': 0, 'io_submit': 0, 'pwritev2': 0}
+{'open': 0, 'openat': 430, 'io_setup': 0}
+{'fsync': 0, 'sync': 0}
+{8640: {}, 8657: {}, 8656: {}}
+{8640: {}, 8657: {}, 8656: {}}
+request size     (mean, std, size): 3986.0813508920987 649.4136555180884 9416
+seq request size (mean, std, size): 3986.0813508920987 649.4136555180884 9416
+seq, rand 0 9416
+seq vs rand: 0.0 KB / 36653.263671875 KB
+
+
+ ./result_fio_2/sync_100_rw_0.txt
+
+{9265: {3: 0, 4: 0, 5: 0, 6: 0, 7: 0}, 9281: {3: 0}, 9280: {3: 0}}
+{'read': 265, 'pread64': 0, 'readv': 0, 'preadv': 0, 'io_getevents': 0, 'preadv2': 0}
+{'write': 153282, 'pwrite64': 0, 'writev': 0, 'pwritev': 0, 'io_submit': 0, 'pwritev2': 0}
+{'open': 0, 'openat': 441, 'io_setup': 0}
+{'fsync': 1532, 'sync': 0}
+{9265: {}, 9281: {}, 9280: {}}
+{9265: {}, 9281: {}, 9280: {}}
+request size     (mean, std, size): 4089.2291286555806 163.3427749197109 153464
+sync interval    (mean, std, size): 100.0 0.0 1531
+seq request size (mean, std, size): 2368111.166037736 38474651.257596806 265
+seq, rand 1 264
+seq vs rand: 612800.0 KB / 41.2685546875 KB
+
+
+ ./result_fio_2/sync_100_rw_25.txt
+
+{9889: {3: 0, 4: 0, 5: 0, 6: 0, 7: 0}, 9906: {3: 0}, 9904: {3: 0}}
+{'read': 45807, 'pread64': 0, 'readv': 0, 'preadv': 0, 'io_getevents': 0, 'preadv2': 0}
+{'write': 134980, 'pwrite64': 0, 'writev': 0, 'pwritev': 0, 'io_submit': 0, 'pwritev2': 0}
+{'open': 0, 'openat': 453, 'io_setup': 0}
+{'fsync': 1781, 'sync': 0}
+{9889: {}, 9906: {}, 9904: {}}
+{9889: {}, 9906: {}, 9904: {}}
+request size     (mean, std, size): 4090.2724978694673 150.24031092875035 180706
+sync interval    (mean, std, size): 100.0 0.0 1348
+seq request size (mean, std, size): 2768302.554307116 35582177.7377181 267
+seq, rand 2 265
+seq vs rand: 721756.0 KB / 57.263671875 KB
+
+
+ ./result_fio_2/sync_100_rw_50.txt
+
+{10514: {3: 0, 4: 0, 5: 0, 6: 0, 7: 0}, 10531: {3: 0}, 10529: {3: 0}}
+{'read': 88714, 'pread64': 0, 'readv': 0, 'preadv': 0, 'io_getevents': 0, 'preadv2': 0}
+{'write': 88280, 'pwrite64': 0, 'writev': 0, 'pwritev': 0, 'io_submit': 0, 'pwritev2': 0}
+{'open': 0, 'openat': 450, 'io_setup': 0}
+{'fsync': 1755, 'sync': 0}
+{10514: {}, 10531: {}, 10529: {}}
+{10514: {}, 10531: {}, 10529: {}}
+request size     (mean, std, size): 4090.149700700344 151.83997387942597 176913
+sync interval    (mean, std, size): 100.0 0.0 881
+seq request size (mean, std, size): 1060998.0263929619 11447922.091878684 682
+seq, rand 95 587
+seq vs rand: 700116.0 KB / 6525.263671875 KB
+
+
+ ./result_fio_2/sync_100_rw_100.txt
+
+{11137: {3: 0, 4: 0, 5: 0, 6: 0, 7: 0}, 11154: {3: 0}, 11153: {3: 0}}
+{'read': 1036277, 'pread64': 0, 'readv': 0, 'preadv': 0, 'io_getevents': 0, 'preadv2': 0}
+{'write': 76, 'pwrite64': 0, 'writev': 0, 'pwritev': 0, 'io_submit': 0, 'pwritev2': 0}
+{'open': 0, 'openat': 585, 'io_setup': 0}
+{'fsync': 0, 'sync': 0}
+{11137: {}, 11154: {}, 11153: {}}
+{11137: {}, 11154: {}, 11153: {}}
+request size     (mean, std, size): 4094.9972893321856 62.904699791265735 1036276
+seq request size (mean, std, size): 15834132.130597016 128664601.69660318 268
+seq, rand 4 264
+seq vs rand: 4144048.0 KB / 41.2685546875 KB
+
+
+ ./result_fio_2/sync_100_randrw_0.txt
+
+{11798: {3: 0, 4: 0, 5: 0, 6: 0, 7: 0}, 11815: {3: 0}, 11813: {3: 0}}
+{'read': 265, 'pread64': 0, 'readv': 0, 'preadv': 0, 'io_getevents': 0, 'preadv2': 0}
+{'write': 19466, 'pwrite64': 0, 'writev': 0, 'pwritev': 0, 'io_submit': 0, 'pwritev2': 0}
+{'open': 0, 'openat': 435, 'io_setup': 0}
+{'fsync': 194, 'sync': 0}
+{11798: {}, 11815: {}, 11813: {}}
+{11798: {}, 11815: {}, 11813: {}}
+request size     (mean, std, size): 4043.1646155410904 453.58434781724924 19664
+sync interval    (mean, std, size): 100.0 0.0 193
+seq request size (mean, std, size): 4043.1646155410904 453.58434781724924 19664
+seq, rand 0 19664
+seq vs rand: 0.0 KB / 77641.3955078125 KB
+
+
+ ./result_fio_2/sync_100_randrw_25.txt
+
+{12422: {3: 0, 4: 0, 5: 0, 6: 0, 7: 0}, 12439: {3: 0}, 12437: {3: 0}}
+{'read': 4072, 'pread64': 0, 'readv': 0, 'preadv': 0, 'io_getevents': 0, 'preadv2': 0}
+{'write': 11360, 'pwrite64': 0, 'writev': 0, 'pwritev': 0, 'io_submit': 0, 'pwritev2': 0}
+{'open': 0, 'openat': 429, 'io_setup': 0}
+{'fsync': 151, 'sync': 0}
+{12422: {}, 12439: {}, 12437: {}}
+{12422: {}, 12439: {}, 12437: {}}
+request size     (mean, std, size): 4028.573680781759 511.43696254360896 15350
+sync interval    (mean, std, size): 100.0 0.0 111
+seq request size (mean, std, size): 4028.573680781759 511.43696254360896 15350
+seq, rand 0 15350
+seq vs rand: 0.0 KB / 60389.263671875 KB
+
+
+ ./result_fio_2/sync_100_randrw_50.txt
+
+{13044: {3: 0, 4: 0, 5: 0, 6: 0, 7: 0}, 13061: {3: 0}, 13059: {3: 0}}
+{'read': 6210, 'pread64': 0, 'readv': 0, 'preadv': 0, 'io_getevents': 0, 'preadv2': 0}
+{'write': 6095, 'pwrite64': 0, 'writev': 0, 'pwritev': 0, 'io_submit': 0, 'pwritev2': 0}
+{'open': 0, 'openat': 441, 'io_setup': 0}
+{'fsync': 116, 'sync': 0}
+{13044: {}, 13061: {}, 13059: {}}
+{13044: {}, 13061: {}, 13059: {}}
+request size     (mean, std, size): 4011.3240611961055 571.85995203776 12223
+sync interval    (mean, std, size): 100.0 0.0 59
+seq request size (mean, std, size): 4011.3240611961055 571.85995203776 12223
+seq, rand 0 12223
+seq vs rand: 0.0 KB / 47881.263671875 KB
+
+
+ ./result_fio_2/sync_100_randrw_100.txt
+
+{13670: {3: 0, 4: 0, 5: 0, 6: 0, 7: 0}, 13687: {3: 0}, 13685: {3: 0}}
+{'read': 9867, 'pread64': 0, 'readv': 0, 'preadv': 0, 'io_getevents': 0, 'preadv2': 0}
+{'write': 75, 'pwrite64': 0, 'writev': 0, 'pwritev': 0, 'io_submit': 0, 'pwritev2': 0}
+{'open': 0, 'openat': 439, 'io_setup': 0}
+{'fsync': 0, 'sync': 0}
+{13670: {}, 13687: {}, 13685: {}}
+{13670: {}, 13687: {}, 13685: {}}
+request size     (mean, std, size): 3991.094871275086 634.8449130078246 9866
+seq request size (mean, std, size): 3991.094871275086 634.8449130078246 9866
+seq, rand 0 9866
+seq vs rand: 0.0 KB / 38453.263671875 KB
+
+
+ ./result_fio_2/sync_1000_rw_0.txt
+
+{14293: {3: 0, 4: 0, 5: 0, 6: 0, 7: 0}, 14310: {3: 0}, 14309: {3: 0}}
+{'read': 264, 'pread64': 0, 'readv': 0, 'preadv': 0, 'io_getevents': 0, 'preadv2': 0}
+{'write': 490067, 'pwrite64': 0, 'writev': 0, 'pwritev': 0, 'io_submit': 0, 'pwritev2': 0}
+{'open': 0, 'openat': 507, 'io_setup': 0}
+{'fsync': 490, 'sync': 0}
+{14293: {}, 14310: {}, 14309: {}}
+{14293: {}, 14310: {}, 14309: {}}
+request size     (mean, std, size): 4093.888900447311 91.25514741558887 490263
+sync interval    (mean, std, size): 1000.0 0.0 489
+seq request size (mean, std, size): 7573895.298113207 87064616.1930596 265
+seq, rand 2 263
+seq vs rand: 1960000.0 KB / 41.263671875 KB
+
+
+ ./result_fio_2/sync_1000_rw_25.txt
+
+{14921: {3: 0, 4: 0, 5: 0, 6: 0, 7: 0}, 14938: {3: 0}, 14936: {3: 0}}
+{'read': 113892, 'pread64': 0, 'readv': 0, 'preadv': 0, 'io_getevents': 0, 'preadv2': 0}
+{'write': 338962, 'pwrite64': 0, 'writev': 0, 'pwritev': 0, 'io_submit': 0, 'pwritev2': 0}
+{'open': 0, 'openat': 486, 'io_setup': 0}
+{'fsync': 449, 'sync': 0}
+{14921: {}, 14938: {}, 14936: {}}
+{14921: {}, 14938: {}, 14936: {}}
+request size     (mean, std, size): 4093.705064127057 95.15014111276317 452773
+sync interval    (mean, std, size): 1000.0 0.0 337
+seq request size (mean, std, size): 6890405.661710037 73558599.96156454 269
+seq, rand 3 266
+seq vs rand: 1810020.0 KB / 57.2685546875 KB
+
+
+ ./result_fio_2/sync_1000_rw_50.txt
+
+{15545: {3: 0, 4: 0, 5: 0, 6: 0, 7: 0}, 15562: {3: 0}, 15560: {3: 0}}
+{'read': 213350, 'pread64': 0, 'readv': 0, 'preadv': 0, 'io_getevents': 0, 'preadv2': 0}
+{'write': 213113, 'pwrite64': 0, 'writev': 0, 'pwritev': 0, 'io_submit': 0, 'pwritev2': 0}
+{'open': 0, 'openat': 497, 'io_setup': 0}
+{'fsync': 419, 'sync': 0}
+{15545: {}, 15562: {}, 15560: {}}
+{15545: {}, 15562: {}, 15560: {}}
+request size     (mean, std, size): 4093.5726132904297 97.84870608386488 426382
+sync interval    (mean, std, size): 1000.0 0.0 212
+seq request size (mean, std, size): 2349159.7281292058 22411393.813957963 743
+seq, rand 110 633
+seq vs rand: 1697000.0 KB / 7517.263671875 KB
+
+
+ ./result_fio_2/sync_1000_rw_100.txt
+
+{16169: {3: 0, 4: 0, 5: 0, 6: 0, 7: 0}, 16186: {3: 0}, 16184: {3: 0}}
+{'read': 1048845, 'pread64': 0, 'readv': 0, 'preadv': 0, 'io_getevents': 0, 'preadv2': 0}
+{'write': 76, 'pwrite64': 0, 'writev': 0, 'pwritev': 0, 'io_submit': 0, 'pwritev2': 0}
+{'open': 0, 'openat': 573, 'io_setup': 0}
+{'fsync': 0, 'sync': 0}
+{16169: {}, 16186: {}, 16184: {}}
+{16169: {}, 16186: {}, 16184: {}}
+request size     (mean, std, size): 4095.0132050142824 62.399105492840704 1048844
+seq request size (mean, std, size): 16026231.45522388 130195789.32448797 268
+seq, rand 4 264
+seq vs rand: 4194304.0 KB / 61.263671875 KB
+
+
+ ./result_fio_2/sync_1000_randrw_0.txt
+
+{16796: {3: 0, 4: 0, 5: 0, 6: 0, 7: 0}, 16813: {3: 0}, 16812: {3: 0}}
+{'read': 265, 'pread64': 0, 'readv': 0, 'preadv': 0, 'io_getevents': 0, 'preadv2': 0}
+{'write': 25972, 'pwrite64': 0, 'writev': 0, 'pwritev': 0, 'io_submit': 0, 'pwritev2': 0}
+{'open': 0, 'openat': 430, 'io_setup': 0}
+{'fsync': 25, 'sync': 0}
+{16796: {}, 16813: {}, 16812: {}}
+{16796: {}, 16813: {}, 16812: {}}
+request size     (mean, std, size): 4056.2982536589093 393.8506767524507 26169
+sync interval    (mean, std, size): 1000.0 0.0 24
+seq request size (mean, std, size): 4056.2982536589093 393.8506767524507 26169
+seq, rand 0 26169
+seq vs rand: 0.0 KB / 103661.3955078125 KB
+
+
+ ./result_fio_2/sync_1000_randrw_25.txt
+
+{17421: {3: 0, 4: 0, 5: 0, 6: 0, 7: 0}, 17438: {3: 0}, 17436: {3: 0}}
+{'read': 4228, 'pread64': 0, 'readv': 0, 'preadv': 0, 'io_getevents': 0, 'preadv2': 0}
+{'write': 11776, 'pwrite64': 0, 'writev': 0, 'pwritev': 0, 'io_submit': 0, 'pwritev2': 0}
+{'open': 0, 'openat': 439, 'io_setup': 0}
+{'fsync': 15, 'sync': 0}
+{17421: {}, 17438: {}, 17436: {}}
+{17421: {}, 17438: {}, 17436: {}}
+request size     (mean, std, size): 4031.000062802236 502.3074627162301 15923
+sync interval    (mean, std, size): 1000.0 0.0 10
+seq request size (mean, std, size): 4031.000062802236 502.3074627162301 15923
+seq, rand 0 15923
+seq vs rand: 0.0 KB / 62681.263671875 KB
+
+
+ ./result_fio_2/sync_1000_randrw_50.txt
+
+{18045: {3: 0, 4: 0, 5: 0, 6: 0, 7: 0}, 18062: {3: 0}, 18060: {3: 0}}
+{'read': 6403, 'pread64': 0, 'readv': 0, 'preadv': 0, 'io_getevents': 0, 'preadv2': 0}
+{'write': 6277, 'pwrite64': 0, 'writev': 0, 'pwritev': 0, 'io_submit': 0, 'pwritev2': 0}
+{'open': 0, 'openat': 436, 'io_setup': 0}
+{'fsync': 15, 'sync': 0}
+{18045: {}, 18062: {}, 18060: {}}
+{18045: {}, 18062: {}, 18060: {}}
+request size     (mean, std, size): 4013.519844419749 564.598535943797 12598
+sync interval    (mean, std, size): 1000.0 0.0 5
+seq request size (mean, std, size): 4013.519844419749 564.598535943797 12598
+seq, rand 0 12598
+seq vs rand: 0.0 KB / 49377.2685546875 KB
+
+
+ ./result_fio_2/sync_1000_randrw_100.txt
+
+{18669: {3: 0, 4: 0, 5: 0, 6: 0, 7: 0}, 18686: {3: 0}, 18684: {3: 0}}
+{'read': 9964, 'pread64': 0, 'readv': 0, 'preadv': 0, 'io_getevents': 0, 'preadv2': 0}
+{'write': 75, 'pwrite64': 0, 'writev': 0, 'pwritev': 0, 'io_submit': 0, 'pwritev2': 0}
+{'open': 0, 'openat': 431, 'io_setup': 0}
+{'fsync': 0, 'sync': 0}
+{18669: {}, 18686: {}, 18684: {}}
+{18669: {}, 18686: {}, 18684: {}}
+request size     (mean, std, size): 3992.116230051189 631.8308915842376 9963
+seq request size (mean, std, size): 3992.116230051189 631.8308915842376 9963
+seq, rand 0 9963
+seq vs rand: 0.0 KB / 38841.263671875 KB
