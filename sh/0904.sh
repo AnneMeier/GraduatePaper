@@ -6,13 +6,13 @@ ext4_format() {
 
 
 f2fs_format(){
-	mkfs.f2fs /dev/sdb3
+	mkfs.f2fs -f /dev/sdb3
 	mount -t f2fs -w /dev/sdb3 /home/j/hd3
 	chown j /home/j/hd3
 }
 
 btrfs_format(){
-	mkfs.btrfs /dev/sdb3
+	mkfs.btrfs -f /dev/sdb3
 	mount -t btrfs -w /dev/sdb3 /home/j/hd3
 	chown j /home/j/hd3
 }
