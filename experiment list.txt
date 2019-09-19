@@ -1,0 +1,37 @@
+ext4
+mount options
+*journal option = writeback, ordered, journal
+*journal async commit on/off
+barrier
+*delalloc on/off
+
+formatting options
+*blocksize (-b) 1024, 204, 4096
+inode-size (-I)
+
+
+f2fs
+mount options
+active_logs
+flush+merge
+nobarrier
+alloc_mode
+*fsync_mode
+*checkpoint
+
+formatting optoins
+*sector-size
+*segments-per-section
+*sections-per-zone
+
+btrfs
+mount options
+autodefrag on/off
+barrier on/off
+*nodatacow
+*nodatasum
+
+formatting options
+*nodesize
+*sectorsize
+*leafsize
