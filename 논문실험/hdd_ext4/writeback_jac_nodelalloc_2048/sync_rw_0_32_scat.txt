@@ -1,0 +1,36 @@
+fio_test_file: (g=0): rw=rw, bs=(R) 32B-32B, (W) 32B-32B, (T) 32B-32B, ioengine=sync, iodepth=1
+...
+fio-3.15
+Starting 1000 processes
+
+fio_test_file: (groupid=0, jobs=1000): err= 0: pid=19929: Tue Oct 15 08:51:49 2019
+  write: IOPS=56.2k, BW=1755KiB/s (1797kB/s)(174MiB/101683msec); 0 zone resets
+    clat (nsec): min=710, max=12657M, avg=16402632.70, stdev=250394147.89
+     lat (nsec): min=760, max=12657M, avg=16402695.61, stdev=250394150.16
+    clat percentiles (nsec):
+     |  1.00th=[       764],  5.00th=[       772], 10.00th=[       780],
+     | 20.00th=[       788], 30.00th=[       940], 40.00th=[      1176],
+     | 50.00th=[      1544], 60.00th=[      1880], 70.00th=[      2288],
+     | 80.00th=[      2768], 90.00th=[      3600], 95.00th=[      4896],
+     | 99.00th=[  55312384], 99.50th=[1002438656], 99.90th=[4462739456],
+     | 99.95th=[5670699008], 99.99th=[8153726976]
+   bw (  KiB/s): min=    0, max=47586, per=100.00%, avg=7924.53, stdev=13.94, samples=43057
+   iops        : min= 1566, max=1525672, avg=261724.75, stdev=444.62, samples=43057
+  lat (nsec)   : 750=0.02%, 1000=32.60%
+  lat (usec)   : 2=30.28%, 4=29.20%, 10=5.05%, 20=0.20%, 50=0.63%
+  lat (usec)   : 100=0.13%, 250=0.12%, 500=0.03%, 750=0.02%, 1000=0.01%
+  lat (msec)   : 2=0.02%, 4=0.01%, 10=0.03%, 20=0.09%, 50=0.52%
+  lat (msec)   : 100=0.25%, 250=0.12%, 500=0.06%, 750=0.04%, 1000=0.06%
+  lat (msec)   : 2000=0.22%, >=2000=0.28%
+  cpu          : usr=0.00%, sys=0.02%, ctx=246771, majf=0, minf=17315
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=0,5709800,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+  WRITE: bw=1755KiB/s (1797kB/s), 1755KiB/s-1755KiB/s (1797kB/s-1797kB/s), io=174MiB (183MB), run=101683-101683msec
+
+Disk stats (read/write):
+  sdb: ios=86162/1012, merge=0/1850, ticks=5982097/50483, in_queue=5859120, util=92.42%

@@ -1,8 +1,8 @@
 ext4_format() {
-	#loc	jour		asyn		dela		bs
-	#sda1 	journal 	async_comm 	delalloc 	4
-	#	mount		mount		mount		mkfs
-	#	data=		jac		del		-b
+	#loc	jour		asyn				dela			bs
+	#sda1 journal async_comm 	delalloc 	4
+	#			mount		mount				mount			mkfs
+	#			data=		jac					del				-b
 	mkfs.ext4 -b $5 -F /dev/$1
 	case $3 in
 		journal_async_commit)
@@ -15,10 +15,10 @@ ext4_format() {
 
 
 f2fs_format(){
-	#loc	fsync	cpoint	segpsec	secpzone
-	#sda1	posix 	disable 1 	2
-	#	mount	mount	mkfs	mkfs
-	#	f._m.=	c.p.=	-s	-z
+	#loc	fsync		cpoint	segpsec	secpzone
+	#sda1	posix 	disable 1 			2
+	#			mount		mount		mkfs		mkfs
+	#			f._m.=	c.p.=		-s			-z
 	mkfs.f2fs -s $4 -z $5 -f /dev/$1
 	mount -t f2fs -o fsync_mode=$2,checkpoint=$3 -w /dev/$1 /home/j/hd3
 	chown j /home/j/hd3
@@ -26,9 +26,9 @@ f2fs_format(){
 
 btrfs_format(){
 	#loc	datacow secsize nodesize
-	#sda1	datacow	1024	2
-	#	mount	mkfs	mkfs
-	#	-o	-s	-n
+	#sda1	datacow	1024		2
+	#			mount		mkfs		mkfs
+	#			-o			-s			-n
 	echo $1 $2 $3 $4
 	mkfs.btrfs -s $3 -n $4 -f /dev/$1
 	mount -t btrfs -w /dev/$1 /home/j/hd3

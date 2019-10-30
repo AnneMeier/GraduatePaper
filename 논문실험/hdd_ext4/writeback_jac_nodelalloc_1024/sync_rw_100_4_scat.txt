@@ -1,0 +1,36 @@
+fio_test_file: (g=0): rw=rw, bs=(R) 4B-4B, (W) 4B-4B, (T) 4B-4B, ioengine=sync, iodepth=1
+...
+fio-3.15
+Starting 1000 processes
+
+fio_test_file: (groupid=0, jobs=1000): err= 0: pid=5336: Tue Oct 15 07:21:55 2019
+  read: IOPS=4749k, BW=18.1MiB/s (18.0MB/s)(1812MiB/100021msec)
+    clat (nsec): min=310, max=16498M, avg=164673.88, stdev=9480361.09
+     lat (nsec): min=350, max=16498M, avg=170397.68, stdev=9577420.16
+    clat percentiles (nsec):
+     |  1.00th=[      844],  5.00th=[     1080], 10.00th=[     1224],
+     | 20.00th=[     1416], 30.00th=[     1576], 40.00th=[     1720],
+     | 50.00th=[     1880], 60.00th=[     2064], 70.00th=[     2256],
+     | 80.00th=[     2512], 90.00th=[     2928], 95.00th=[     3312],
+     | 99.00th=[     4128], 99.50th=[     4512], 99.90th=[     5600],
+     | 99.95th=[  8847360], 99.99th=[346030080]
+   bw (  KiB/s): min= 7944, max=110893, per=100.00%, avg=19359.49, stdev=16.78, samples=185270
+   iops        : min=2149245, max=28505664, avg=5078143.94, stdev=4291.83, samples=185270
+  lat (nsec)   : 500=0.22%, 750=0.36%, 1000=2.36%
+  lat (usec)   : 2=53.84%, 4=41.86%, 10=1.30%, 20=0.01%, 50=0.01%
+  lat (usec)   : 100=0.01%, 250=0.01%, 500=0.01%, 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.01%, 20=0.01%, 50=0.01%
+  lat (msec)   : 100=0.01%, 250=0.01%, 500=0.04%, 750=0.01%, 1000=0.01%
+  lat (msec)   : 2000=0.01%, >=2000=0.01%
+  cpu          : usr=0.33%, sys=0.86%, ctx=306525, majf=0, minf=16775
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=474953976,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: bw=18.1MiB/s (18.0MB/s), 18.1MiB/s-18.1MiB/s (18.0MB/s-18.0MB/s), io=1812MiB (1900MB), run=100021-100021msec
+
+Disk stats (read/write):
+  sdb: ios=15492/938, merge=1088/620, ticks=1164394/32794, in_queue=1165040, util=68.20%
